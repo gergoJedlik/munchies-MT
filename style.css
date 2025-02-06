@@ -4,10 +4,28 @@
     src: url('resources/milkyway-demo.regular.ttf');
 }
 
+@keyframes bg-scroll {
+    from {
+        background-position-x:0 ;
+        background-position-y:0 ;
+    }
+    to {
+        background-position-x:100% ;
+        background-position-y:-100% ;
+    }
+}
+
 body {
     margin: 0;
     padding: 0;
     background-color: #70D2FF;
+    background-image: url(resources/image-removebg.png);
+    background-blend-mode: color-dodge;
+    background-size: 20em;
+    animation-name: bg-scroll;
+    animation-duration: 300s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
     color: #070B0D;
 }
 
@@ -19,10 +37,10 @@ a{
 nav{
     width: 100%;
     height: 5em;
-    border-bottom: 1px solid white;
-    border-bottom-right-radius: 0.5em;
-    border-bottom-left-radius: 0.5em;
     background-color: #FFFBDB;
+    border-bottom: 3px solid white;
+    border-bottom-left-radius: 1em;
+    border-bottom-right-radius: 1em;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -32,29 +50,34 @@ nav{
     padding: auto;
 }
 
+.logo-img{
+    height: 3em;
+}
+
 .content{
     display: flex;
     justify-content: top;
     align-items: center;
     flex-direction: column;
-
     width: 100%;
-    height: 44em;
+    min-height: 42em;
 }
 
 .opening{
     margin-top: 1.5em;
     width: 95%;
+    min-width: 344px;
+    max-width: 30em;
     border-radius: 2em;
-    border-bottom-right-radius: 7em;
-    border-bottom-left-radius: 7em;
+    border-bottom-right-radius: 5em;
+    border-bottom-left-radius: 5em;
     height: 10em;
     background-color: #FFFBDB;
     display: flex;
     justify-content: center;
     flex-direction: column;
     text-align: center;
-    overflow: hidden;
+    padding-block: 14px;
 }
 
 .opening h1{
@@ -69,13 +92,39 @@ nav{
     
 }
 
+@media only screen and (max-width: 400px) { 
+    .opening h1{
+        font-size: 2em;
+    }
+    
+    .opening p{
+        font-size: 0.9em;
+        
+    }
+}
+
 .cards{
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 1em;
-    /*flex-direction: column;*/
-    align-items: center;
-    margin-top: 2.5em;
+    height: max-content;
+    margin-block: 4em;
 }
+
+
+@media only screen and (max-width: 750px) {
+    .cards{
+        flex-direction: column;
+    }
+}
+
+@media only screen and (min-width: 900px) {
+    .cards{
+        margin-inline: 6em;
+    }
+}
+
 
 .food-name{
     font-family: 'Milkyway';
@@ -92,5 +141,29 @@ nav{
 
 .food-card:hover{
     background-color: #FFF;
+}
+
+.footnote{
+    display: flex;
+    justify-content: center;
+    bottom: 0;
+    position: fixed;
+    border-top: solid 3px black;
+    border-top-left-radius: 0.7em;
+    border-top-right-radius: 0.7em;
+    background-color: #0b2e47;
+    height: 1.7em;
+    width: 100%;
+}
+
+.add-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transform: translateY(-1em);
+    border-radius: 2em;
+    height: 2em;
+    width: 3em;
 }
 
