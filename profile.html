@@ -16,7 +16,7 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script> -->
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
-    <script src="app.js"></script>
+    <script src="./Database/dbmodule.ts"></script>
 
     <title>Munchies Rater - Login</title>
 </head>
@@ -48,11 +48,11 @@
                     type="password" name="password" id="password">
             </div>
             <div class="login-buttons mt-20 flex flex-row gap-12 px-10 py-3 rounded-xl">
-                <button onclick=""
+                <button onclick="Login()"
                     class="border-black border-2 p-2.5 bg-[#A6FAFF] hover:bg-[#79F7FF] shadow-[3px_3px_0px_rgba(0,0,0,1)] hover:shadow-[0px_0px_0px_rgba(0,0,0,1)] active:bg-[#00E1EF] w-24 login-button">
                     Login
                 </button>
-                <button onclick=""
+                <button onclick="Register()"
                     class="border-black border-2 p-2.5 bg-[#A6FAFF] hover:bg-[#79F7FF] shadow-[3px_3px_0px_rgba(0,0,0,1)] hover:shadow-[0px_0px_0px_rgba(0,0,0,1)] active:bg-[#00E1EF] w-24 login-button">
                     Register
                 </button>
