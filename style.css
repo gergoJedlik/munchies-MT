@@ -42,13 +42,16 @@ nav {
     border-bottom: 3px solid white;
     border-bottom-left-radius: 1em;
     border-bottom-right-radius: 1em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: block
+}
+
+.bg-lite {
+    background-color: #fffce8;
 }
 
 .logo {
     padding: auto;
+    margin: auto;
 }
 
 .logo-img {
@@ -175,6 +178,23 @@ nav {
     border-radius: 2em;
     height: 2em;
     width: 3em;
+}
+
+.title {
+    font-family: "Milkyway";
+    font-size: 3em;
+}
+
+.field-label {
+    font-size: 1.6em;
+}
+
+.login-buttons {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.login-button {
+    border-radius: 2em;
 }
 
 .postmenu-title {
