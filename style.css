@@ -1,7 +1,7 @@
 @font-face {
-  font-family: "Milkyway";
+    font-family: "Milkyway";
     font-weight: bold;
-  src: url("resources/milkyway-demo.regular.ttf");
+    src: url("resources/milkyway-demo.regular.ttf");
 }
 
 @keyframes bg-scroll {
@@ -19,15 +19,15 @@
 body {
     margin: 0;
     padding: 0;
-  background-color: #70d2ff;
+    background-color: #70d2ff;
     background-image: url(resources/image-removebg.png);
     background-blend-mode: color-dodge;
     background-size: 20em;
     animation-name: bg-scroll;
-  animation-duration: 260s;
+    animation-duration: 260s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
-  color: #070b0d;
+    color: #070b0d;
 }
 
 a {
@@ -36,7 +36,6 @@ a {
 }
 
 nav {
-<<<<<<< HEAD
     width: 100%;
     height: 5em;
     background-color: #FFFBDB;
@@ -47,15 +46,6 @@ nav {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-=======
-  width: 100%;
-  height: 5em;
-  background-color: #fffbdb;
-  border-bottom: 3px solid white;
-  border-bottom-left-radius: 1em;
-  border-bottom-right-radius: 1em;
-  display: block;
->>>>>>> c3cc3438b9183468dae2e7cba513d9694a04490a
 }
 
 .bg-lite {
@@ -63,7 +53,6 @@ nav {
 }
 
 .logo {
-<<<<<<< HEAD
     margin: auto;
 }
 
@@ -75,8 +64,8 @@ nav {
     height: 3em;
 }
 
-.logo-fix{
-  padding-left: 4.2em;
+.logo-fix {
+    padding-left: 4.2em;
 }
 
 .content {
@@ -97,7 +86,7 @@ nav {
     border-bottom-right-radius: 5em;
     border-bottom-left-radius: 5em;
     height: 10em;
-  background-color: #fffbdb;
+    background-color: #fffbdb;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -106,7 +95,7 @@ nav {
 }
 
 .opening h1 {
-  font-family: "Milkyway", sans-serif;
+    font-family: "Milkyway", sans-serif;
     font-size: 2.1em;
     margin: none;
     padding-top: none;
@@ -160,11 +149,11 @@ nav {
 }
 
 .food-card {
-  background-color: #fffbdb;
+    background-color: #fffbdb;
 }
 
 .food-card:hover {
-  background-color: #fff;
+    background-color: #fff;
 }
 
 .footnote {
@@ -182,11 +171,11 @@ nav {
     -webkit-transition: all 0.4s ease;
     -moz-transition: all 0.4s ease;
     -o-transition: all 0.4s ease;
-  transition: all 0.4s ease;
+    transition: all 0.4s ease;
 }
 
 .footnote-open {
-  height: 95%;
+    height: 95%;
 }
 
 .add-button {
@@ -201,15 +190,15 @@ nav {
 }
 
 .save-post {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  height: 3em;
-  width: 5em;
-  border-radius: 1.5em;
-  align-self: flex-end;
-  margin-left: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3em;
+    width: 5em;
+    border-radius: 1.5em;
+    align-self: flex-end;
+    margin-bottom: 0.5em;
+    margin-left: 2em;
 }
 
 .title {
@@ -230,7 +219,7 @@ nav {
 }
 
 .postmenu-title {
-  color: #fffbdb;
+    color: #fffbdb;
     font-family: "Milkyway";
     font-size: 2.1em;
     margin: 1em 0 0 1em;
