@@ -1,254 +1,265 @@
 @font-face {
-    font-family: 'Milkyway';
-    font-weight: bold;
-    src: url('resources/milkyway-demo.regular.ttf');
+  font-family: "Milkyway";
+  font-weight: bold;
+  src: url("resources/milkyway-demo.regular.ttf");
 }
 
 @keyframes bg-scroll {
-    from {
-        background-position-x: 0;
-        background-position-y: 0;
-    }
+  from {
+    background-position-x: 0;
+    background-position-y: 0;
+  }
 
-    to {
-        background-position-x: 100%;
-        background-position-y: -100%;
-    }
+  to {
+    background-position-x: 100%;
+    background-position-y: -100%;
+  }
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    background-color: #70D2FF;
-    background-image: url(resources/image-removebg.png);
-    background-blend-mode: color-dodge;
-    background-size: 20em;
-    animation-name: bg-scroll;
-    animation-duration: 300s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    color: #070B0D;
+  margin: 0;
+  padding: 0;
+  background-color: #70d2ff;
+  background-image: url(resources/image-removebg.png);
+  background-blend-mode: color-dodge;
+  background-size: 20em;
+  animation-name: bg-scroll;
+  animation-duration: 260s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  color: #070b0d;
 }
 
 a {
-    color: unset;
-    text-decoration: unset;
+  color: unset;
+  text-decoration: unset;
 }
 
 nav {
-    width: 100%;
-    height: 5em;
-    background-color: #FFFBDB;
-    border-bottom: 3px solid white;
-    border-bottom-left-radius: 1em;
-    border-bottom-right-radius: 1em;
-    display: block
+  width: 100%;
+  height: 5em;
+  background-color: #fffbdb;
+  border-bottom: 3px solid white;
+  border-bottom-left-radius: 1em;
+  border-bottom-right-radius: 1em;
+  display: block;
 }
 
 .bg-lite {
-    background-color: #fffce8;
+  background-color: #fffce8;
 }
 
 .logo {
-    padding: auto;
-    margin: auto;
+  margin: auto;
 }
 
 .logo-img {
-    height: 3em;
+  height: 3em;
+}
+
+.logo-fix{
+  padding-left: 4.2em;
 }
 
 .content {
-    display: flex;
-    justify-content: top;
-    align-items: center;
-    flex-direction: column;
-    width: 100%;
-    min-height: 42em;
+  display: flex;
+  justify-content: top;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  min-height: 42em;
 }
 
 .opening {
-    margin-top: 1.5em;
-    width: 95%;
-    min-width: 344px;
-    max-width: 30em;
-    border-radius: 2em;
-    border-bottom-right-radius: 5em;
-    border-bottom-left-radius: 5em;
-    height: 10em;
-    background-color: #FFFBDB;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
-    padding-block: 14px;
+  margin-top: 1.5em;
+  width: 95%;
+  min-width: 344px;
+  max-width: 30em;
+  border-radius: 2em;
+  border-bottom-right-radius: 5em;
+  border-bottom-left-radius: 5em;
+  height: 10em;
+  background-color: #fffbdb;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  padding-block: 14px;
 }
 
 .opening h1 {
-    font-family: 'Milkyway', sans-serif;
-    font-size: 2.1em;
-    margin: none;
-    padding-top: none;
+  font-family: "Milkyway", sans-serif;
+  font-size: 2.1em;
+  margin: none;
+  padding-top: none;
 }
 
 .opening p {
-    font-size: 0.94em;
-
+  font-size: 0.94em;
 }
 
 @media only screen and (max-width: 400px) {
-    .opening h1 {
-        font-size: 2em;
-    }
+  .opening h1 {
+    font-size: 2em;
+  }
 
-    .opening p {
-        font-size: 0.9em;
-
-    }
+  .opening p {
+    font-size: 0.9em;
+  }
 }
 
 .cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2.3em;
-    height: max-content;
-    margin-block: 4em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2.3em;
+  height: max-content;
+  margin-block: 4em;
 }
 
-
 @media only screen and (max-width: 750px) {
-    .cards {
-        flex-direction: column;
-    }
+  .cards {
+    flex-direction: column;
+  }
 }
 
 @media only screen and (min-width: 900px) {
-    .cards {
-        margin-inline: 6em;
-    }
+  .cards {
+    margin-inline: 6em;
+  }
 }
 
-
 .food-name {
-    font-family: 'Milkyway';
-    font-size: 1.9em;
+  font-family: "Milkyway";
+  font-size: 1.9em;
 }
 
 .card-button {
-    align-self: flex-end;
+  align-self: flex-end;
 }
 
 .food-card {
-    background-color: #FFFBDB;
+  background-color: #fffbdb;
 }
 
 .food-card:hover {
-    background-color: #FFF;
+  background-color: #fff;
 }
 
 .footnote {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    bottom: 0;
-    position: fixed;
-    border-top: solid 3px black;
-    border-top-left-radius: 0.7em;
-    border-top-right-radius: 0.7em;
-    background-color: #0b2e47;
-    height: 1.7em;
-    width: 100%;
-    -webkit-transition: all 0.4s ease;
-    -moz-transition: all 0.4s ease;
-    -o-transition: all 0.4s ease;
-    transition: all 0.4s ease
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  bottom: 0;
+  position: fixed;
+  border-top: solid 3px black;
+  border-top-left-radius: 0.7em;
+  border-top-right-radius: 0.7em;
+  background-color: #0b2e47;
+  height: 1.7em;
+  width: 100%;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
 }
 
 .footnote-open {
-    height: 95%
+  height: 95%;
 }
 
 .add-button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    transform: translateY(-1em);
-    border-radius: 2em;
-    height: 2em;
-    width: 3em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  transform: translateY(-1em);
+  border-radius: 2em;
+  height: 2em;
+  width: 3em;
+}
+
+.save-post {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 3em;
+  width: 5em;
+  border-radius: 1.5em;
+  align-self: flex-end;
+  margin-left: 2em;
 }
 
 .title {
-    font-family: "Milkyway";
-    font-size: 3em;
+  font-family: "Milkyway";
+  font-size: 3em;
 }
 
 .field-label {
-    font-size: 1.6em;
+  font-size: 1.6em;
 }
 
 .login-buttons {
-    background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 .login-button {
-    border-radius: 2em;
+  border-radius: 2em;
 }
 
 .postmenu-title {
-    color: #FFFBDB;
-    font-family: "Milkyway";
-    font-size: 2.1em;
-    margin: 1em 0 0 1em;
+  color: #fffbdb;
+  font-family: "Milkyway";
+  font-size: 2.1em;
+  margin: 1em 0 0 1em;
 }
 
 .postmenu {
-    visibility: hidden;
-    margin-top: 1.7em;
-    width: 90%;
-    height: 95%;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.1);
-    border-radius: 3em;
+  visibility: hidden;
+  margin-top: 1.7em;
+  width: 90%;
+  height: 95%;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 3em;
 }
 
 .foodname-input {
-    border: white 2px solid;
-    border-radius: 2em;
-    height: 2em;
+  border: white 2px solid;
+  border-radius: 2em;
+  height: 2em;
 }
 
 .cont-row {
-    width: 80%;
-    background-color: rgba(0, 0, 0, 0.1);
-    border-radius: 3em;
-    padding-inline: 2em;
+  width: 80%;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 3em;
+  padding-inline: 2em;
 }
 
 .cont-block {
-    width: 37%;
-    background-color: rgba(0, 0, 0, 0.1);
-    border-radius: 3em;
-    padding-inline: 2em;
+  width: 37%;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 3em;
+  padding-inline: 2em;
 }
 
 @media only screen and (max-width: 768px) {
-    .cont-block {
-        width: 80%;
-    }
+  .cont-block {
+    width: 80%;
+  }
 }
 
 .overflow-off {
-    overflow: hidden;
+  overflow: hidden;
 }
 
 .overflow-on {
-    overflow-y: visible;
-    overflow-x: hidden;
+  overflow-y: visible;
+  overflow-x: hidden;
 }
 
 .shown {
-    visibility: visible;
+  visibility: visible;
 }
