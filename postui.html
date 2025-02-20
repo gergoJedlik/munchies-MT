@@ -20,6 +20,10 @@
         <!-- let me work pls pls pls :cringe emojis: -->
     
         <title>Munchies Rater</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     </head>
 
 <body>
@@ -42,19 +46,57 @@
         </div>
     </nav>
 
-    <div >
+    <div class="split">
         <img src="/resources/first.jpg" alt="" class="first shadow-[10px_10px_0px_rgba(0,0,0,1)]">
-        <button class="border-black border-2 bg-cyan-200 hover:bg-cyan-300 active:bg-cyan-400 w-15 h-15 p-2 hover:shadow-[2px_2px_0px_rgba(0,0,0,1)]  editbutton">
-            <svg width="36" height="36" viewBox="-1 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-               <path fill-rule="evenodd" clip-rule="evenodd" d="M19.06 3.59L20.41 4.94C21.2 5.72 21.2 6.99 20.41 7.77L7.18 21H3V16.82L13.4 6.41L16.23 3.59C17.01 2.81 18.28 2.81 19.06 3.59ZM5 19L6.41 19.06L16.23 9.23L14.82 7.82L5 17.64V19Z" fill="black"/>
-            </svg>
-         </button>
-          
+        <div class="right food-name " style="width: 70%;">
+            <p>Food Name</p>
+            <div class="progress-container" style="margin-top:-1%;">
+                <div class="progress-label spacemono">Taste</div> 
+                <div class="progress-wrapper">
+                    <div class="progress-barar progress-bar"></div>
+                </div>
+                <span class="progress-textar progress-text spacemono">0/10</span>
+            </div>
+            <div class="progress-container">
+                <div class="progress-label spacemono">Difficulty</div>
+                <div class="progress-wrapper">
+                    <div class="progress-bar"></div>
+                </div>
+                <span class="progress-text spacemono">0/10</span>
+            </div>
+            <div class="progress-container">
+                <div class="progress-label spacemono">Nutrition</div>
+                <div class="progress-wrapper">
+                    <div class="progress-bar"></div>
+                </div>
+                <span class="progress-text spacemono">0/10</span>
+            </div>
+            <div class="progress-container">
+                <div class="progress-label spacemono">Price</div> 
+                <div class="progress-wrapper">
+                    <div class="progress-bar spacemono"></div>
+                </div>
+                <span class="progress-text spacemono">0/10</span>
+            </div>
+            <div class="progress-container">
+                <div class="progress-label spacemono">All</div> 
+                <div class="progress-wrapper">
+                    <div class="progress-barall progress-bar"></div>
+                </div>
+                <span class="progress-textall progress-text spacemono">0/40</span>
+            </div>
+            <script src="app.js"></script>
+        </div>
     </div>
+    
 
-    <div class="right">
-        <p>cigany</p>
-    </div>  
+
+    <button class="border-black border-2 bg-cyan-200 hover:bg-cyan-300 active:bg-cyan-400 w-15 h-15 p-2 shadow-[2px_2px_0px_rgba(0,0,0,1)] hover:shadow-[0px_0px_0px_rgba(0,0,0,0)] editbutton">
+        <svg width="36" height="36" viewBox="-1 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+           <path fill-rule="evenodd" clip-rule="evenodd" d="M19.06 3.59L20.41 4.94C21.2 5.72 21.2 6.99 20.41 7.77L7.18 21H3V16.82L13.4 6.41L16.23 3.59C17.01 2.81 18.28 2.81 19.06 3.59ZM5 19L6.41 19.06L16.23 9.23L14.82 7.82L5 17.64V19Z" fill="black"/>
+        </svg>
+     </button>
+    
     
     <div class="footnote" id="post-window">
         <button onclick="newPost()"
