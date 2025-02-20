@@ -107,6 +107,13 @@ nav {
     }
 }
 
+@media only screen and (max-width: 885px) {
+    .first {
+        min-width: 87%;
+    }
+
+}
+
 .cards {
     display: flex;
     flex-wrap: wrap;
@@ -251,4 +258,29 @@ nav {
 
 .shown {
     visibility: visible;
+}
+
+textarea {
+    resize: none;
+  }
+
+.first{
+    width: 35%;
+    margin-left: 5%;
+    margin-top: 3%;
+    border-radius: 25px;
+    object-fit: cover; 
+    aspect-ratio: 1 / 1;
+}
+
+.editbutton {
+    margin-top: 15px;
+    margin-left: 5%;
+    cursor: pointer;
+    border-radius: 7px;
+}
+
+.right{
+    float: right;
+    margin-right: 5%;
 }
