@@ -355,8 +355,9 @@ textarea {
     align-items: center;
     font-weight: bold;
     font-size: 22.7%;
+    min-width: 150px;
 }
 
-.spacemono{
+.spacemono{ 
     font-family: "Space Mono", serif;
 }
