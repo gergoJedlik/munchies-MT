@@ -20,6 +20,21 @@ function setProgress(score, index) {
 
 // setProgressall(10);
 
+function cardGen(index, element){
+  let card = `<div class='w-80 h-120 border-black border-2 rounded-md shadow-[5px_5px_0px_rgba(11,46,71,1)] food-card'><a href='postui.html?postindex=${index}' class='block cursor-pointer' ><article class='w-full h-full'><figure class='w-full h-1/2 border-black border-b-2'><img src='resources/first.jpg' alt='Food pic' class='w-full h-60 object-cover'/></figure><div class='px-6 py-5 text-left h-full'><h2 class='text-[32px] mb-4 food-name'>${element.foodname}</h2><p class='text-xs mb-4 line-clamp-4 food-desc'>${element.descreption}</p></div></article></a></div>`
+  return card
+}
+
+function fillCardContainer() {
+  const container = document.getElementById("cards")
+
+  for (let index = 0; index < kaják.length; index++) {
+    const element = kaják[index];
+    const card = cardGen(index, element)
+    container.innerHTML += card
+  }
+}
+
 function fillWithData(index) {
   document.getElementById("foodname").innerHTML = kaják[index].foodname;
   let rating = kaják[index].rating;
@@ -55,7 +70,7 @@ let kaják = [
     userId: "",
   },
   {
-    foodname: "Győri háztartási keksz",
+    foodname: "Arrabona Plain Cracker",
     descreption: "",
     ingredients: "bolt",
     rating: {
@@ -71,9 +86,9 @@ let kaják = [
     userId: "",
   },
   {
-    foodname: "Otthoni hotdog",
+    foodname: "Homemade hotdog",
     descreption: "",
-    ingredients: "kifli, virsli, ketchup, mustár",
+    ingredients: "kifli, virsli, ketchup, mustar",
     rating: {
       egyszeruseg: 7,
       íz: 8,
@@ -87,9 +102,9 @@ let kaják = [
     userId: "",
   },
   {
-    foodname: "mcnuggets",
+    foodname: "McNuggets",
     descreption: "",
-    ingredients: "McDonalds",
+    ingredients: "McDonald's",
     rating: {
       egyszeruseg: 8,
       íz: 9,
@@ -103,7 +118,7 @@ let kaják = [
     userId: "",
   },
   {
-    foodname: "mekis fagyi (m&ms)",
+    foodname: "M&M McFlurry",
     descreption: "",
     ingredients: "",
     rating: {
