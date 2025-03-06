@@ -31,6 +31,12 @@ function fillWithData(index) {
   setProgress(össz, 5);
 }
 
+function getDataFromURL(url)
+{
+  let splitted = url.split("=");
+  return splitted[1];
+}
+
 let kaják = [
   {
     foodname: "Pains au Lait with strawberry jam",
@@ -55,7 +61,7 @@ let kaják = [
     rating: {
       egyszeruseg: 10,
       íz: 5,
-      nutrition: "",
+      nutrition: 0,
       spawnRate: 8,
       állag: 4,
       price: 0,
@@ -87,7 +93,7 @@ let kaják = [
     rating: {
       egyszeruseg: 8,
       íz: 9,
-      nutrition: "",
+      nutrition: 0,
       spawnRate: 0,
       állag: 10,
       price: 0,
@@ -103,7 +109,7 @@ let kaják = [
     rating: {
       egyszeruseg: 8,
       íz: 8,
-      nutrition: "",
+      nutrition: 0,
       spawnRate: 0,
       állag: 8,
       price: 0,
@@ -119,7 +125,7 @@ let kaják = [
     rating: {
       egyszeruseg: 10,
       íz: 7,
-      nutrition: "",
+      nutrition: 0,
       spawnRate: 7,
       állag: 8,
       price: 0,
@@ -135,7 +141,7 @@ let kaják = [
     rating: {
       egyszeruseg: 5,
       íz: 9,
-      nutrition: "",
+      nutrition: 0,
       spawnRate: 9,
       állag: 8,
       price: 0,
@@ -151,7 +157,7 @@ let kaják = [
     rating: {
       egyszeruseg: 6,
       íz: 8,
-      nutrition: "",
+      nutrition: 0,
       spawnRate: 7,
       állag: 10,
       price: 0,
@@ -167,7 +173,7 @@ let kaják = [
     rating: {
       egyszeruseg: 6,
       íz: 8,
-      nutrition: "",
+      nutrition: 0,
       spawnRate: 7,
       állag: 7,
       price: 0,
@@ -183,7 +189,7 @@ let kaják = [
     rating: {
       egyszeruseg: 0,
       íz: 9.5,
-      nutrition: "",
+      nutrition: 0,
       spawnRate: 1,
       állag: 10,
       price: 0,
@@ -199,7 +205,7 @@ let kaják = [
     rating: {
       egyszeruseg: 5,
       íz: 9,
-      nutrition: "",
+      nutrition: 0,
       spawnRate: 2,
       állag: 8,
       price: 0,
@@ -215,7 +221,7 @@ let kaják = [
     rating: {
       egyszeruseg: 0,
       íz: 7,
-      nutrition: "2",
+      nutrition: 2,
       spawnRate: 0,
       állag: 6,
       price: 6,

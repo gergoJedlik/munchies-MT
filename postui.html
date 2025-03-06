@@ -24,7 +24,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 </head>
 
-<body onload="fillWithData(2)">
+<body onload="fillWithData(getDataFromURL(window.location.href))" >
     <nav class="nav shadow-[3px_3px_0px_rgba(11,46,71,1)]">
         <div class="nav-icon logo"> <a href="index.html"> <img class="logo-img" src="resources/munchlogo.png" alt="ICON"></a></div>
         <div class="nav-icon profile mr-4 mt-3">
