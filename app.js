@@ -1,41 +1,4 @@
 function newPost() {
-    
-    let window = document.getElementById("post-window")
-    let postmenu = document.getElementById("postmenu")
-    if (window.classList.contains("footnote-open")) {
-        window.classList.remove("footnote-open")
-        postmenu.classList.remove("shown")
-        return
-    }
-    window.classList.add("footnote-open")
-    postmenu.classList.add("shown")
-    postmenu.classList.add("overflow-on")
-}
-
-function setProgress(value) {
-    if (value < 1 || value > 10) return;
-    const progressBar = document.querySelector('.progress-barar');
-    const progressText = document.querySelector('.progress-textar');
-    
-    const percentage = (value / 10) * 100;
-    progressBar.style.width = percentage + "%";
-    progressText.textContent = `${value}/10`;
-}
-
-setProgress(5);
-
-function setProgressall (value) {
-    if (value < 1 || value > 40) return;
-    const progressBar = document.querySelector('.progress-barall');
-    const progressText = document.querySelector('.progress-textall');
-    
-    const percentage = (value / 40) * 100;
-    progressBar.style.width = percentage + "%";
-    progressText.textContent = `${value}/40`;
-}
-
-setProgressall(10);
-{
   let window = document.getElementById("post-window");
   let postmenu = document.getElementById("postmenu");
   if (window.classList.contains("footnote-open")) {
@@ -48,18 +11,38 @@ setProgressall(10);
   postmenu.classList.add("overflow-on");
 }
 
+function setProgress(score, index) {
+  document.getElementById("progbar" + index).style.width =
+    score * (index == 5 ? 2.5 : 10) + "%";
+  document.getElementById("score" + index).innerHTML =
+    score + (index == 5 ? "/40" : "/10");
+}
+
+// setProgressall(10);
+
+function fillWithData(index) {
+  document.getElementById("foodname").innerHTML = kaják[index].foodname;
+  let rating = kaják[index].rating;
+  setProgress(rating.íz, 1);
+  setProgress(rating.egyszeruseg, 2);
+  setProgress(rating.nutrition, 3);
+  setProgress(rating.price, 4);
+  let össz = rating.íz + rating.egyszeruseg + rating.nutrition + rating.price;
+  setProgress(össz, 5);
+}
+
 let kaják = [
   {
-    foodname: "Pains au Lait eper lekvárral",
+    foodname: "Pains au Lait with strawberry jam",
     descreption: "",
     ingredients: "Pains au Lait, epre lekvár",
     rating: {
       egyszeruseg: 9,
       íz: 8,
-      nutrition: "",
+      nutrition: 1,
       spawnRate: 6.5,
       állag: 7,
-      price: 0,
+      price: 7,
     },
     numOfRatings: 1,
     user: "",
@@ -88,7 +71,7 @@ let kaják = [
     rating: {
       egyszeruseg: 7,
       íz: 8,
-      nutrition: "",
+      nutrition: 0,
       spawnRate: 6,
       állag: 5,
       price: 0,
@@ -256,5 +239,5 @@ let kaják = [
     numOfRatings: 1,
     user: "",
     userId: "",
-  }
+  },
 ];
