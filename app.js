@@ -188,4 +188,36 @@ let kaják = [
     user: "",
     userId: "",
   },
+  {
+    foodname: "Emily in Paris Tartalettes by Duc De Coeur",
+    descreption: "",
+    ingredients: "",
+    rating: {
+      egyszeruseg: 0,
+      íz: 7,
+      nutrition: "2",
+      spawnRate: 0,
+      állag: 6,
+      price: 6,
+    },
+    numOfRatings: 3,
+    user: "",
+    userId: "",
+  },
+  {
+    foodname: "Házikészítésű túrófánk",
+    descreption: "",
+    ingredients: "",
+    rating: {
+      egyszeruseg: 3,
+      íz: 10,
+      nutrition: 7,
+      spawnRate: 2,
+      állag: 9,
+      price: 0,
+    },
+    numOfRatings: 1,
+    user: "",
+    userId: "",
+  }
 ];
