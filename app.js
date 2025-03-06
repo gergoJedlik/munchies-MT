@@ -1,3 +1,5 @@
+
+
 function newPost() {
   let window = document.getElementById("post-window");
   let postmenu = document.getElementById("postmenu");
@@ -21,8 +23,7 @@ function setProgress(score, index) {
 // setProgressall(10);
 
 function cardGen(index, element){
-  let card = `<div class='w-80 h-120 border-black border-2 rounded-md shadow-[5px_5px_0px_rgba(11,46,71,1)] food-card'><a href='postui.html?postindex=${index}' class='block cursor-pointer' ><article class='w-full h-full'><figure class='w-full h-1/2 border-black border-b-2'><img src='resources/first.jpg' alt='Food pic' class='w-full h-60 object-cover'/></figure><div class='px-6 py-5 text-left h-full'><h2 class='text-[32px] mb-4 food-name'>${element.foodname}</h2><p class='text-xs mb-4 line-clamp-4 food-desc'>${element.descreption}</p></div></article></a></div>`
-  return card
+  return `<div class='w-80 h-120 border-black border-2 rounded-md shadow-[5px_5px_0px_rgba(11,46,71,1)] food-card'><a href='postui.html?postindex=${index}' class='block cursor-pointer' ><article class='w-full h-full'><figure class='w-full h-1/2 border-black border-b-2'><img src='resources/first.jpg' alt='Food pic' class='w-full h-60 object-cover'/></figure><div class='px-6 py-5 text-left h-full'><h2 class='text-[32px] mb-4 food-name'>${element.foodname}</h2><p class='text-xs mb-4 line-clamp-4 food-desc'>${element.descreption}</p></div></article></a></div>`
 }
 
 function fillCardContainer() {
@@ -51,6 +52,8 @@ function getDataFromURL(url)
   let splitted = url.split("=");
   return splitted[1];
 }
+
+
 
 let kaják = [
   {
@@ -118,7 +121,7 @@ let kaják = [
     userId: "",
   },
   {
-    foodname: "M&M McFlurry",
+    foodname: "M'n'M McFlurry",
     descreption: "",
     ingredients: "",
     rating: {
@@ -150,7 +153,7 @@ let kaják = [
     userId: "",
   },
   {
-    foodname: "bögrés süti",
+    foodname: "Mug Cake",
     descreption: "",
     ingredients: "liszt, sötőpor, cukor, tej, tojás, kakaópor, olaj",
     rating: {
@@ -166,7 +169,7 @@ let kaják = [
     userId: "",
   },
   {
-    foodname: "melegszendvics",
+    foodname: "Toasted Sandwich",
     descreption: "",
     ingredients: "",
     rating: {
@@ -182,7 +185,7 @@ let kaják = [
     userId: "",
   },
   {
-    foodname: "krumplifőzelék virslivel",
+    foodname: "Hungarian style potato stew with vienna sausages",
     descreption: "",
     ingredients: "",
     rating: {
@@ -198,7 +201,7 @@ let kaják = [
     userId: "",
   },
   {
-    foodname: "Banánkenyér",
+    foodname: "Bananabread",
     descreption: "",
     ingredients: "",
     rating: {
@@ -214,7 +217,7 @@ let kaják = [
     userId: "",
   },
   {
-    foodname: "Gesztenyepüré",
+    foodname: "Chestnut puree",
     descreption: "",
     ingredients: "",
     rating: {
@@ -246,7 +249,7 @@ let kaják = [
     userId: "",
   },
   {
-    foodname: "Házikészítésű túrófánk",
+    foodname: "Homemade cottagecheese filled donut",
     descreption: "",
     ingredients: "",
     rating: {
