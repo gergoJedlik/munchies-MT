@@ -35,7 +35,7 @@ function setProgressall (value) {
 }
 
 setProgressall(10);
-
+{
   let window = document.getElementById("post-window");
   let postmenu = document.getElementById("postmenu");
   if (window.classList.contains("footnote-open")) {
