@@ -16,7 +16,7 @@
             integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
             crossorigin="anonymous"></script> -->
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
-    <script src="app.js"></script>
+    <script type="module" src="app.js"></script>
     <!-- let me work pls pls pls :cringe emojis: -->
 
     <title>Munchies Rater</title>
@@ -27,7 +27,7 @@
         rel="stylesheet">
 </head>
 
-<body onload="fillWithData(getDataFromURL(window.location.href))">
+<body>
     <nav class="nav shadow-[3px_3px_0px_rgba(11,46,71,1)]">
         <div class="nav-icon logo"> <a href="index.html"> <img class="logo-img" src="resources/munchlogo.png"
                     alt="ICON"></a></div>
@@ -88,7 +88,8 @@
                 </div>
                 <span class="progress-text spacemono" id="score5">0/40</span>
             </div>
-            <script src="app.js"></script>
+            <!-- <script src="app.js"></script> -->
+            <script type="module" src="./postui.js"></script>
         </div>
     </div>
 
@@ -107,7 +108,7 @@
     </div>
 
     <div class="footnote" id="post-window">
-        <button onclick="newPost()"
+        <button id="add-button"
             class="border-black border-2 p-2.5 bg-[#A6FAFF] hover:bg-[#79F7FF] shadow-[3px_3px_0px_rgba(0,0,0,1)] hover:shadow-[0px_0px_0px_rgba(0,0,0,1)] active:bg-[#00E1EF] add-button">
             <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLXBsdXMiPjxwYXRoIGQ9Ik01IDEyaDE0Ii8+PHBhdGggZD0iTTEyIDV2MTQiLz48L3N2Zz4="
                 alt="plus icon">
