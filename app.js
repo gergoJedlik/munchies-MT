@@ -22,7 +22,7 @@ function setProgress(score, index) {
 
 // setProgressall(10);
 
-function cardGen(index, element){
+function cardGen(index, element) {
   return `<div class='w-80 h-120 border-black border-2 rounded-md shadow-[5px_5px_0px_rgba(11,46,71,1)] food-card'><a href='postui.html?postindex=${index}' class='block cursor-pointer' ><article class='w-full h-full'><figure class='w-full h-1/2 border-black border-b-2'><img src='resources/first.jpg' alt='Food pic' class='w-full h-60 object-cover'/></figure><div class='px-6 py-5 text-left h-full'><h2 class='text-[32px] mb-4 food-name'>${element.foodname}</h2><p class='text-xs mb-4 line-clamp-4 food-desc'>${element.descreption}</p></div></article></a></div>`
 }
 
@@ -47,11 +47,12 @@ function fillWithData(index) {
   setProgress(össz, 5);
 }
 
-function getDataFromURL(url)
-{
+function getDataFromURL(url) {
   let splitted = url.split("=");
   return splitted[1];
 }
+
+fetch("http://localhost:3000/posts")
 
 
 
@@ -249,7 +250,7 @@ let kaják = [
     userId: "",
   },
   {
-    foodname: "Homemade cottagecheese filled donut",
+    foodname: "Homemade Chocolatte Cookie",
     descreption: "",
     ingredients: "",
     rating: {
