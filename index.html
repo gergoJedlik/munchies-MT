@@ -16,7 +16,8 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script> -->
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
-    <script src="app.js"></script>
+    <!-- <script type="module" src="./app.js"></script> -->
+    <script type="module" src="./index.js"></script>
 
     <title>Munchies Rater</title>
 </head>
@@ -26,12 +27,13 @@
         <div class="nav-icon logo"><img class="logo-img" src="resources/munchlogo.png" alt="ICON"></div>
         <div class="nav-icon profile mr-4 mt-3">
             <a href="./profile.html">
-                <?xml version="1.0" encoding="UTF-8"?><svg width="50px" height="50px" stroke-width="2" viewBox="0 0 24 24"
-                    fill="none" xmlns="http://www.w3.org/2000/svg" color="#000000">
+                <?xml version="1.0" encoding="UTF-8"?><svg width="50px" height="50px" stroke-width="2"
+                    viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#000000">
                     <path
                         d="M12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2Z"
                         stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                    <path d="M4.271 18.3457C4.271 18.3457 6.50002 15.5 12 15.5C17.5 15.5 19.7291 18.3457 19.7291 18.3457"
+                    <path
+                        d="M4.271 18.3457C4.271 18.3457 6.50002 15.5 12 15.5C17.5 15.5 19.7291 18.3457 19.7291 18.3457"
                         stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
                     <path
                         d="M12 12C13.6569 12 15 10.6569 15 9C15 7.34315 13.6569 6 12 6C10.3431 6 9 7.34315 9 9C9 10.6569 10.3431 12 12 12Z"
@@ -49,9 +51,9 @@
                 that<br>fits your needs the best!</p>
         </div>
 
-        <div class="cards">
+        <div class="cards" id="cards">
 
-            <div class="w-80 h-full border-black border-2 rounded-md shadow-[5px_5px_0px_rgba(11,46,71,1)] food-card">
+            <!-- <div class="w-80 h-full border-black border-2 rounded-md shadow-[5px_5px_0px_rgba(11,46,71,1)] food-card">
                 <a href="postui.html?postindex=0" class="block cursor-pointer" >
                     <article class="w-full h-full">
                         <figure class="w-full h-1/2 border-black border-b-2">
@@ -72,58 +74,13 @@
                     </article>
                 </a>
             </div>
-
-            <div class="w-80 h-full border-black border-2 rounded-md shadow-[5px_5px_0px_rgba(11,46,71,1)] food-card">
-                <a href="postui.html?postindex=1" class="block cursor-pointer">
-                    <article class="w-full h-full">
-                        <figure class="w-full h-1/2 border-black border-b-2">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhLrq4s4xwmnVwnLBDcBPH7CZY4SSto1DoDA&s" alt="Food pic" class="w-full h-60 object-cover" />
-                        </figure>
-                        <div class="px-6 py-5 text-left h-full">
-                            <h2 class="text-[32px] mb-4 food-name">Food Name</h1>
-                                <p class="text-xs mb-4 line-clamp-4 food-desc">
-                                    Neobrutalism is an aesthetic characterized by high contrast
-                                    elements, bright colors, and bold shapes. It is often used to make
-                                    a statement, as it is meant to be eye-catching and stand out to
-                                    the viewer. It is also used in user interface and web design, with
-                                    features such as vibrant colors and bold shapes. Neobrutalism can
-                                    also be used in print design, with an example being a bold shape
-                                    with a vibrant color fill applied to it.
-                                </p>
-                        </div>
-                    </article>
-                </a>
-            </div>
-
-            <div class="w-80 h-full border-black border-2 rounded-md shadow-[5px_5px_0px_rgba(11,46,71,1)] food-card">
-                <a href="postui.html?postindex=2" class="block cursor-pointer">
-                    <article class="w-full h-full">
-                        <figure class="w-full h-1/2 border-black border-b-2">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKC_hCIEu_RjcyB4Xv1HVyqwIw4qq2vvO99Q&s" alt="Food pic" class="w-full h-60 object-cover" />
-                        </figure>
-                        <div class="px-6 py-5 text-left h-full">
-                            <h2 class="text-[32px] mb-4 food-name">Food Name</h1>
-                                <p class="text-xs mb-4 line-clamp-4 food-desc">
-                                    Neobrutalism is an aesthetic characterized by high contrast
-                                    elements, bright colors, and bold shapes. It is often used to make
-                                    a statement, as it is meant to be eye-catching and stand out to
-                                    the viewer. It is also used in user interface and web design, with
-                                    features such as vibrant colors and bold shapes. Neobrutalism can
-                                    also be used in print design, with an example being a bold shape
-                                    with a vibrant color fill applied to it.
-                                </p>
-                        </div>
-                    </article>
-                </a>
-            </div>
-
-
+ -->
 
 
 
         </div>
         <div class="footnote" id="post-window">
-            <button onclick="newPost()"
+            <button id="add-button"
                 class="border-black border-2 p-2.5 bg-[#A6FAFF] hover:bg-[#79F7FF] shadow-[3px_3px_0px_rgba(0,0,0,1)] hover:shadow-[0px_0px_0px_rgba(0,0,0,1)] active:bg-[#00E1EF] add-button">
                 <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLXBsdXMiPjxwYXRoIGQ9Ik01IDEyaDE0Ii8+PHBhdGggZD0iTTEyIDV2MTQiLz48L3N2Zz4="
                     alt="plus icon">

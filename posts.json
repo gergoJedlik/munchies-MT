@@ -1,0 +1,210 @@
+[
+  {
+    "foodname": "Pains au Lait with strawberry jam",
+    "descreption": "",
+    "ingredients": "Pains au Lait, epre lekvár",
+    "rating": {
+      "egyszeruseg": 9,
+      "íz": 8,
+      "nutrition": 1,
+      "spawnRate": 6.5,
+      "állag": 7,
+      "price": 7
+    },
+    "numOfRatings": 1,
+    "user": "",
+    "userId": ""
+  },
+  {
+    "foodname": "Arrabona Plain Cracker",
+    "descreption": "",
+    "ingredients": "bolt",
+    "rating": {
+      "egyszeruseg": 10,
+      "íz": 5,
+      "nutrition": 0,
+      "spawnRate": 8,
+      "állag": 4,
+      "price": 0
+    },
+    "numOfRatings": 1,
+    "user": "",
+    "userId": ""
+  },
+  {
+    "foodname": "Homemade hotdog",
+    "descreption": "",
+    "ingredients": "kifli, virsli, ketchup, mustar",
+    "rating": {
+      "egyszeruseg": 7,
+      "íz": 8,
+      "nutrition": 0,
+      "spawnRate": 6,
+      "állag": 5,
+      "price": 0
+    },
+    "numOfRatings": 1,
+    "user": "",
+    "userId": ""
+  },
+  {
+    "foodname": "McNuggets",
+    "descreption": "",
+    "ingredients": "McDonald's",
+    "rating": {
+      "egyszeruseg": 8,
+      "íz": 9,
+      "nutrition": 0,
+      "spawnRate": 0,
+      "állag": 10,
+      "price": 0
+    },
+    "numOfRatings": 1,
+    "user": "",
+    "userId": ""
+  },
+  {
+    "foodname": "M'n'M McFlurry",
+    "descreption": "",
+    "ingredients": "",
+    "rating": {
+      "egyszeruseg": 8,
+      "íz": 8,
+      "nutrition": 0,
+      "spawnRate": 0,
+      "állag": 8,
+      "price": 0
+    },
+    "numOfRatings": 1,
+    "user": "",
+    "userId": ""
+  },
+  {
+    "foodname": "Paula Copy",
+    "descreption": "amugy ezekhez kene egy website",
+    "ingredients": "",
+    "rating": {
+      "egyszeruseg": 10,
+      "íz": 7,
+      "nutrition": 0,
+      "spawnRate": 7,
+      "állag": 8,
+      "price": 0
+    },
+    "numOfRatings": 1,
+    "user": "",
+    "userId": ""
+  },
+  {
+    "foodname": "Mug Cake",
+    "descreption": "",
+    "ingredients": "liszt, sötőpor, cukor, tej, tojás, kakaópor, olaj",
+    "rating": {
+      "egyszeruseg": 5,
+      "íz": 9,
+      "nutrition": 0,
+      "spawnRate": 9,
+      "állag": 8,
+      "price": 0
+    },
+    "numOfRatings": 1,
+    "user": "",
+    "userId": ""
+  },
+  {
+    "foodname": "Toasted Sandwich",
+    "descreption": "",
+    "ingredients": "",
+    "rating": {
+      "egyszeruseg": 6,
+      "íz": 8,
+      "nutrition": 0,
+      "spawnRate": 7,
+      "állag": 10,
+      "price": 0
+    },
+    "numOfRatings": 1,
+    "user": "",
+    "userId": ""
+  },
+  {
+    "foodname": "Hungarian style potato stew with vienna sausages",
+    "descreption": "",
+    "ingredients": "",
+    "rating": {
+      "egyszeruseg": 6,
+      "íz": 8,
+      "nutrition": 0,
+      "spawnRate": 7,
+      "állag": 7,
+      "price": 0
+    },
+    "numOfRatings": 1,
+    "user": "",
+    "userId": ""
+  },
+  {
+    "foodname": "Bananabread",
+    "descreption": "",
+    "ingredients": "",
+    "rating": {
+      "egyszeruseg": 0,
+      "íz": 9.5,
+      "nutrition": 0,
+      "spawnRate": 1,
+      "állag": 10,
+      "price": 0
+    },
+    "numOfRatings": 1,
+    "user": "",
+    "userId": ""
+  },
+  {
+    "foodname": "Chestnut puree",
+    "descreption": "",
+    "ingredients": "",
+    "rating": {
+      "egyszeruseg": 5,
+      "íz": 9,
+      "nutrition": 0,
+      "spawnRate": 2,
+      "állag": 8,
+      "price": 0
+    },
+    "numOfRatings": 1,
+    "user": "",
+    "userId": ""
+  },
+  {
+    "foodname": "Emily in Paris Tartalettes by Duc De Coeur",
+    "descreption": "",
+    "ingredients": "",
+    "rating": {
+      "egyszeruseg": 0,
+      "íz": 7,
+      "nutrition": 2,
+      "spawnRate": 0,
+      "állag": 6,
+      "price": 6
+    },
+    "numOfRatings": 3,
+    "user": "",
+    "userId": ""
+  },
+  {
+    "foodname": "Homemade cottagecheese filled donut",
+    "descreption": "",
+    "ingredients": "",
+    "rating": {
+      "egyszeruseg": 3,
+      "íz": 10,
+      "nutrition": 7,
+      "spawnRate": 2,
+      "állag": 9,
+      "price": 0
+    },
+    "numOfRatings": 1,
+    "user": "",
+    "userId": ""
+  }
+]
