@@ -30,7 +30,7 @@ export function fillCardContainer() {
   const container = document.getElementById("cards")
 
   for (let index = 0; index < kaják.length; index++) {
-    if (isNoShowPost(kaják[index])) continue;
+    if (!isNoShowPost(kaják[index])) continue;
 
     const element = kaják[index];
     const card = cardGen(index, element)
@@ -102,12 +102,19 @@ async function GetAllPosts() {
   return foods;
 }
 
+async function refresh() {
+  kaják = await GetAllPosts();
+}
+
 
 export let kaják = await GetAllPosts();
+setInterval(async () => {
+  kaják = await GetAllPosts();
+}, 5000);
 
 // make it refresh every 5 sec
 
-console.log(kaják);
+
 
 
 /*
