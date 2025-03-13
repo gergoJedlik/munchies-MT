@@ -52,15 +52,20 @@
                 that<br>fits your needs the best!</p>
         </div>
         <div class="w-full h-12 flex justify-end items-end">
-            <div class="w-26 h-8 mr-66 bg-gray-200 rounded-md p-2">
+            <div class="w-fit h-10 mr-66 bg-gray-200 rounded-md p-2">
                 <div class="dropdown">
-                    <button class="dropbtn" id="dropbtn">Dropdown</button>
+                    <span class="pr-2">Sort:</span>
+                    <label for="dropbtn" id="dropbtn">basic</label>
+                    <button class="dropbtn hidden" name="dropbtn">Basic</button>
                     <div class="dropdown-content hidden" id="dropdown-content">
-                      <a href="#">Link 1</a>
-                      <a href="#">Link 2</a>
-                      <a href="#">Link 3</a>
+                        <a class="sortOption" id="basic">Basic</a>
+                        <a class="sortOption" id="popular">Popular</a>
+                        <a class="sortOption" id="newest">Most recent</a>
+                        <a class="sortOption" id="oldest">Oldest</a>
+                        <a class="sortOption" id="rating">Rating</a>
+                        <a class="sortOption" id="reverse">Reverse</a>
                     </div>
-                  </div>
+                </div>
             </div>
         </div>
 
