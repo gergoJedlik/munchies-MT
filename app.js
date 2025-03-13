@@ -30,7 +30,7 @@ export function fillCardContainer() {
   const container = document.getElementById("cards")
 
   for (let index = 0; index < kaják.length; index++) {
-    if (!isNoShowPost(kaják[index])) continue;
+    if (isNoShowPost(kaják[index])) continue;
 
     const element = kaják[index];
     const card = cardGen(index, element)
@@ -76,8 +76,8 @@ function isNoShowPost(post) {
     }
  }[]}
  */
-async function GetAllPosts() {
-  const res = await fetch("http://localhost:3000/api/posts")
+async function GetAllPosts(sortMode) {
+  const res = await fetch(`http://localhost:3000/api/posts?sort=${sortMode}`)
   const { data } = await res.json();
   const foods = data.map((post) => {
     let [taste, price, texture, simplicity, nutrition, abundancy] = [0, 0, 0, 0, 0, 0];
@@ -107,12 +107,31 @@ async function refresh() {
 }
 
 
-export let kaják = await GetAllPosts();
+
+const sortModes = Object.freeze({
+  basic: "basic",
+  reverse: "reverse",
+  popular: "popular",
+  price: "price",
+  simplicity: "simplicity",
+  taste: "taste",
+  nutrition: "nutri",
+  time: "time"
+});
+
+// -------MAIN CODE--------
+
+export let sortMode = sortModes.basic
+
+export let kaják = await GetAllPosts(sortMode);
+// make it refresh every 5 sec
 setInterval(async () => {
-  kaják = await GetAllPosts();
+  kaják = await GetAllPosts(sortMode);
 }, 5000);
 
-// make it refresh every 5 sec
+
+
+
 
 
 
