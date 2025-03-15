@@ -74,7 +74,8 @@ function isNoShowPost(post) {
       texture: int,
       nutrition: int,
       simplicity: int,
-      abundancy: int
+      abundancy: int,
+      overall: int
     }
  }[]}
  */
@@ -82,8 +83,8 @@ async function GetAllPosts(sortMode) {
   const res = await fetch(`http://localhost:3000/api/posts?sort=${sortMode}`);
   const { data } = await res.json();
   const foods = data.map((post) => {
-    let [taste, price, texture, simplicity, nutrition, abundancy] = [
-      0, 0, 0, 0, 0, 0,
+    let [taste, price, texture, simplicity, nutrition, abundancy, overall] = [
+      0, 0, 0, 0, 0, 0, 0
     ];
     for (const rating of post.Ratings) {
       taste += rating.taste;
@@ -94,6 +95,7 @@ async function GetAllPosts(sortMode) {
       abundancy += rating.abundancy;
     }
     const len = post.Ratings.length;
+    overall = taste + abundancy + simplicity + nutrition;
     taste = taste / len;
     price = price / len;
     texture = texture / len;
@@ -102,7 +104,7 @@ async function GetAllPosts(sortMode) {
     nutrition = nutrition / len;
     return {
       ...post,
-      rating: { taste, price, texture, abundancy, simplicity, nutrition },
+      rating: { taste, price, texture, abundancy, simplicity, nutrition, overall },
     };
   });
 
@@ -142,20 +144,19 @@ async function GetSpecPost(id) {
 export async function setSort(value) {
   console.log(`Sort : ${value}`)
   sortMode = value;
-  kaják = await GetAllPosts(sortMode)
-  console.log(kaják)
+  kaják = await GetAllPosts(sortMode);
   fillCardContainer();
 }
 
 // -------MAIN CODE--------
 
-let sortMode = "basic";
+let sortMode = "newest";
 
 export let kaják = await GetAllPosts(sortMode);
 // make it refresh every 5 sec
-setInterval(async () => {
+/*setInterval(async () => {
   kaják = await GetAllPosts(sortMode);
-}, 5000);
+}, 5000);*/
 
 /*
 [
