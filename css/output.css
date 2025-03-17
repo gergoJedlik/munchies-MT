@@ -179,6 +179,9 @@
   }
 }
 @layer utilities {
+  .bottom-0 {
+    bottom: calc(var(--spacing) * 0);
+  }
   .container {
     width: 100%;
     @media (width >= 40rem) {
@@ -278,8 +281,8 @@
   .h-60 {
     height: calc(var(--spacing) * 60);
   }
-  .h-120 {
-    height: calc(var(--spacing) * 120);
+  .h-130 {
+    height: calc(var(--spacing) * 130);
   }
   .h-146 {
     height: calc(var(--spacing) * 146);
@@ -430,6 +433,9 @@
   }
   .text-white {
     color: var(--color-white);
+  }
+  .italic {
+    font-style: italic;
   }
   .opacity-45 {
     opacity: 45%;
