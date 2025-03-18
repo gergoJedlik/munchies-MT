@@ -361,7 +361,6 @@ textarea {
     font-family: "Space Mono", serif;
 }
 
-/* Style The Dropdown Button */
 .dropbtn {
     background-color: #4CAF50;
     color: white;
@@ -371,14 +370,12 @@ textarea {
     cursor: pointer;
 }
 
-/* The container <div> - needed to position the dropdown content */
 .dropdown {
     position: relative;
     display: flex;
     flex-direction: row;
 }
 
-/* Dropdown Content (Hidden by Default) */
 .dropdown-content {
     position: absolute;
     background-color: #f9f9f9;
@@ -387,7 +384,6 @@ textarea {
     z-index: 1;
 }
 
-/* Links inside the dropdown */
 .dropdown-content a {
     color: black;
     padding: 12px 16px;
@@ -395,17 +391,14 @@ textarea {
     display: block;
 }
 
-/* Change color of dropdown links on hover */
 .dropdown-content a:hover {
     background-color: #f1f1f1
 }
 
-/* Show the dropdown menu on hover */
 .dropdown-content {
     display: block;
 }
 
-/* Change the background color of the dropdown button when the dropdown content is shown */
 .dropbtn {
     background-color: #3e8e41;
 }
