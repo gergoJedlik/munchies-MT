@@ -413,3 +413,9 @@ textarea {
 .hidden {
     display: none;
 }
+
+#desc, #ingredients{
+    font-size: 30px;
+    text-align: center;
+    padding-top: 5%;
+}
