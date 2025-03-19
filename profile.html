@@ -13,7 +13,7 @@
 
     <title>Munchies Rater - Login</title>
 
-    <script src="./profile.js"></script>
+    <script type="module" src="./profile.js"></script>
 </head>
 
 <body>
@@ -42,13 +42,16 @@
                 <input class="bg-black opacity-45 focus:opacity-35 invalid:bg-red-600 text-white rounded-xl h-8 text-xl"
                     type="password" name="password" id="password">
             </div>
-            <div class="login-buttons mt-20 flex flex-row gap-12 px-10 py-3 rounded-xl">
-                <button onclick="Login()"
-                    class="border-black border-2 p-2.5 bg-[#A6FAFF] hover:bg-[#79F7FF] shadow-[3px_3px_0px_rgba(0,0,0,1)] hover:shadow-[0px_0px_0px_rgba(0,0,0,1)] active:bg-[#00E1EF] w-24 login-button">
+            <div id="error-field" class="hidden error w-full mt-10 rounded-xl border-3 border-red-300 bg-red-400">
+                <p><span id="error-msg"></span></p>
+            </div>
+            <div class="login-buttons mt-10 flex flex-row gap-12 px-10 py-3 rounded-xl">
+                <button id="login"
+                    class="button border-black border-2 p-2.5 bg-[#A6FAFF] hover:bg-[#79F7FF] shadow-[3px_3px_0px_rgba(0,0,0,1)] hover:shadow-[0px_0px_0px_rgba(0,0,0,1)] active:bg-[#00E1EF] w-24 login-button">
                     Login
                 </button>
-                <button onclick="Register()"
-                    class="border-black border-2 p-2.5 bg-[#A6FAFF] hover:bg-[#79F7FF] shadow-[3px_3px_0px_rgba(0,0,0,1)] hover:shadow-[0px_0px_0px_rgba(0,0,0,1)] active:bg-[#00E1EF] w-24 login-button">
+                <button id="register"
+                    class="button border-black border-2 p-2.5 bg-[#A6FAFF] hover:bg-[#79F7FF] shadow-[3px_3px_0px_rgba(0,0,0,1)] hover:shadow-[0px_0px_0px_rgba(0,0,0,1)] active:bg-[#00E1EF] w-24 login-button">
                     Register
                 </button>
             </div>
