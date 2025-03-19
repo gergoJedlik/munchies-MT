@@ -1,12 +1,15 @@
+localStorage.clear();
+
 for (const button of document.querySelectorAll(".button")) {
     button.addEventListener("click", async () => {
-        const username = document.getElementById("username").value
+        const loginUsername = document.getElementById("username").value
         const password = document.getElementById("password").value
         if (button.id == "register") {
             try {
-                await Register(username, password);
-                const userID = await Login(username, password);
-                localStorage.setItem("userID", userID);
+                await Register(loginUsername, password);
+                const userData = await Login(loginUsername, password);
+                localStorage.setItem("userID", userData.userID);
+                localStorage.setItem("username", userData.username);
                 location = "/"
             }
             catch (error) {
@@ -17,8 +20,9 @@ for (const button of document.querySelectorAll(".button")) {
         }
         else if (button.id == "login") {
             try {
-                const userID = await Login(username, password);
-                localStorage.setItem("userID", userID);
+                const userData = await Login(loginUsername, password);
+                localStorage.setItem("userID", userData.userID);
+                localStorage.setItem("username", userData.username);
                 location = "/"
 
             }
@@ -33,13 +37,11 @@ for (const button of document.querySelectorAll(".button")) {
 
 async function Login(username, password) {
     const res = await fetch(`https://munchiesdb.vercel.app/api/users?username=${username}&password=${password}`);
-    const id = await res.text()
-    return id
-
+    return await res.json()
 }
 
 async function Register(username, password) {
-    fetch(`https://munchiesdb.vercel.app/api/users`, {
+    await fetch(`https://munchiesdb.vercel.app/api/users`, {
         method: "POST",
         body: JSON.stringify({
             username: username,
