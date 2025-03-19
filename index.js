@@ -1,7 +1,13 @@
-import { newPost, fillCardContainer, setSort } from "./app.js";
+import { newPost, fillCardContainer, setSort, createPost, kaják } from "./app.js";
 
+console.log(kaják)
 fillCardContainer();
 document.getElementById("add-button").addEventListener("click", newPost);
+
+let username = localStorage.getItem("username")
+if (username) {
+  document.getElementById("username-display").innerText = username;
+}
 
 function sortbutton() {
   if (!document.getElementById("dropdown-content").classList.contains("hidden")) {
@@ -33,4 +39,9 @@ for (const element of document.querySelectorAll(".sortOption")) {
     document.getElementById("dropbtn").innerText = element.id;
   }
   )
-} 
+}
+
+document.getElementById("createPost").addEventListener("click", async () => {
+  document.getElementById("error-msg").innerText = await createPost()
+  document.getElementById("error-field").classList.remove("hidden")
+})
