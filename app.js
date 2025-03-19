@@ -100,7 +100,7 @@ export async function createPost() {
   }
 
   newPost()
-  location = "/";
+  location = "/index.html";
   return "Post Created"
 }
 
