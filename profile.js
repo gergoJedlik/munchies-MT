@@ -32,13 +32,9 @@ for (const button of document.querySelectorAll(".button")) {
 }
 
 async function Login(username, password) {
-    const user = await (fetch(`https://munchiesdb.vercel.app/api/users?username=${username}`).then(res => res.json()));
-    if (!user.user) throw new Error("USER DOESN'T EXIST")
-    console.log(user.user)
-    if (user.user.pass == password) {
-        return user.user.id
-    }
-    throw new Error("PASSWORD INCORRECT");
+    const res = await fetch(`https://munchiesdb.vercel.app/api/users?username=${username}&password=${password}`);
+    const id = await res.text()
+    return id
 
 }
 
