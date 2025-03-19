@@ -10,7 +10,8 @@ for (const button of document.querySelectorAll(".button")) {
                 const userData = await Login(loginUsername, password);
                 localStorage.setItem("userID", userData.userID);
                 localStorage.setItem("username", userData.username);
-                location = window.location.href.replace("profile.html", "index.html");
+                console.log(window.location.href.replace("profile", "index"));
+                //location = window.location.href.replace("profile", "index");
             }
             catch (error) {
                 console.log(error)
@@ -23,7 +24,8 @@ for (const button of document.querySelectorAll(".button")) {
                 const userData = await Login(loginUsername, password);
                 localStorage.setItem("userID", userData.userID);
                 localStorage.setItem("username", userData.username);
-                location = window.location.href.replace("profile.html", "index.html");
+                console.log(window.location.href.replace("profile", "index"));
+                //location = window.location.href.replace("profile", "index");
 
             }
             catch (error) {
