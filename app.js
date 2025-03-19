@@ -46,6 +46,10 @@ export async function fillWithData(id) {
   setProgress(rating.price, 4);
   let össz = rating.taste + rating.simplicity + rating.nutrition + rating.price;
   setProgress(össz, 5);
+  document.getElementById("desc").innerHTML = kaja.Desc
+  if (kaja.Ingredients != null){
+    document.getElementById("ingredients").innerHTML = "Hozzávalók: " + kaja.Ingredients; 
+  }
 }
 
 export function getDataFromURL(url) {
