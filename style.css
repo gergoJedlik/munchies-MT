@@ -288,24 +288,6 @@ textarea {
     margin-bottom: 5%;
 }
 
-.postBotRow {
-    width: 100%;
-    display: inline-flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
-
-.right {
-    float: left;
-    margin-top: 6%;
-    margin-left: 4%;
-    font-size: 100px;
-}
-
-.split {
-    display: flex;
-}
-
 .progress-container {
     display: flex;
     align-items: center;
@@ -416,7 +398,5 @@ textarea {
 
 #desc,
 #ingredients {
-    font-size: 30px;
-    text-align: center;
     padding-top: 5%;
 }
