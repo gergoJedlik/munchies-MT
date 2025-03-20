@@ -2,5 +2,5 @@
 
 @theme {
     --color-paper: #FFFFFB;
-
+    --color-white-blur: rgba(255, 255, 255, 0.7);
 }
