@@ -24,11 +24,11 @@
 </head>
 
 <body>
-    <nav class="nav shadow-[3px_3px_0px_rgba(11,46,71,1)] flex flex-row">
-        <div class="nav-icon logo w-60"><a href="./index.html"><img class="logo-img" src="resources/munchlogo.png"
-                    alt="ICON"></a>
-        </div>
-        <div class="nav-icon profile mr-4 mt-1">
+    <nav class="nav shadow-[3px_3px_0px_rgba(11,46,71,1)] grid grid-cols-4">
+
+        <div data-name="For spacing"></div>
+        <div class="nav-icon logo col-span-2"><img class="logo-img" src="resources/munchlogo.png" alt="ICON"></div>
+        <div class="nav-icon profile ml-auto mr-4 mt-1">
             <a href="./profile.html" class="flex flex-col items-center justify-center h-full">
                 <?xml version="1.0" encoding="UTF-8"?><svg width="40px" height="40px" stroke-width="2"
                     viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#000000">
@@ -51,40 +51,42 @@
         <img id="food-photo" src="/resources/default.jpg" alt="" class="first shadow-[10px_10px_0px_rgba(0,0,0,1)]">
         <div class="right food-name" style="width: 70%;">
             <h1 class="mt-0 mb-5" id="foodname">Food Name</h1>
-            <div class="progress-container" style="margin-top:-1%;">
-                <div class="progress-label spacemono">Taste</div>
-                <div class="progress-wrapper">
-                    <div class="progress-bar" id="progbar1"></div>
+            <div class="flex flex-col border-2 rounded-4xl p-6 max-w-72 gap-6 bg-paper">
+                <div class="progress-container" style="margin-top:-1%;">
+                    <div class="progress-label spacemono">Taste</div>
+                    <div class="progress-wrapper">
+                        <div class="progress-bar" id="progbar1"></div>
+                    </div>
+                    <span class="progress-text spacemono" id="score1">0/10</span>
                 </div>
-                <span class="progress-text spacemono" id="score1">0/10</span>
-            </div>
-            <div class="progress-container">
-                <div class="progress-label spacemono">Simplicity</div>
-                <div class="progress-wrapper">
-                    <div class="progress-bar" id="progbar2"></div>
+                <div class="progress-container">
+                    <div class="progress-label spacemono">Simplicity</div>
+                    <div class="progress-wrapper">
+                        <div class="progress-bar" id="progbar2"></div>
+                    </div>
+                    <span class="progress-text spacemono" id="score2">0/10</span>
                 </div>
-                <span class="progress-text spacemono" id="score2">0/10</span>
-            </div>
-            <div class="progress-container">
-                <div class="progress-label spacemono">Nutrition</div>
-                <div class="progress-wrapper">
-                    <div class="progress-bar" id="progbar3"></div>
+                <div class="progress-container">
+                    <div class="progress-label spacemono">Nutrition</div>
+                    <div class="progress-wrapper">
+                        <div class="progress-bar" id="progbar3"></div>
+                    </div>
+                    <span class="progress-text spacemono" id="score3">0/10</span>
                 </div>
-                <span class="progress-text spacemono" id="score3">0/10</span>
-            </div>
-            <div class="progress-container">
-                <div class="progress-label spacemono">Price</div>
-                <div class="progress-wrapper">
-                    <div class="progress-bar spacemono" id="progbar4"></div>
+                <div class="progress-container">
+                    <div class="progress-label spacemono">Price</div>
+                    <div class="progress-wrapper">
+                        <div class="progress-bar spacemono" id="progbar4"></div>
+                    </div>
+                    <span class="progress-text spacemono" id="score4">0/10</span>
                 </div>
-                <span class="progress-text spacemono" id="score4">0/10</span>
-            </div>
-            <div class="progress-container">
-                <div class="progress-label spacemono">All</div>
-                <div class="progress-wrapper">
-                    <div class="progress-bar" id="progbar5"></div>
+                <div class="progress-container">
+                    <div class="progress-label spacemono">All</div>
+                    <div class="progress-wrapper">
+                        <div class="progress-bar" id="progbar5"></div>
+                    </div>
+                    <span class="progress-text spacemono" id="score5">0/40</span>
                 </div>
-                <span class="progress-text spacemono" id="score5">0/40</span>
             </div>
         </div>
     </div>
