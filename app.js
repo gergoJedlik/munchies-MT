@@ -21,7 +21,7 @@ export function setProgress(score, index) {
 // setProgressall(10);
 
 function cardGen(element) {
-  return `<div class='w-80 h-130 border-black border-2 rounded-md shadow-[5px_5px_0px_rgba(11,46,71,1)] food-card'><a href='postui.html?postid=${element.postID}' class='block cursor-pointer' ><article class='w-full h-full'><figure class='w-full h-1/2 border-black border-b-2'><img src='resources/first.jpg' alt='Food pic' class='w-full h-60 object-cover'/></figure><div class='px-6 py-5 text-left h-full'><h2 class='text-[32px] mb-4 food-name'>${element.FoodName}</h2><p class='text-xs mb-4 line-clamp-4 food-desc'>${element.Desc}</p><footer class="flex justify-end bottom-0"><span class="italic">- ${element.user.username}</span></footer></div></article></a></div>`;
+  return `<div class='w-80 h-130 border-black border-2 rounded-md shadow-[5px_5px_0px_rgba(11,46,71,1)] food-card'><a href='postui.html?postid=${element.postID}' class='block cursor-pointer h-full' ><article class='w-full h-full'><figure class='w-full h-[45%] border-black border-b-2'><img src=${element.Image ? element.Image : './resources/default.jpg'} alt='Food pic' class='w-full h-full object-cover'/></figure><div class='px-6 py-5 text-left h-full'><h2 class='text-[32px] mb-4 food-name break-words leading-none line-clamp-3'>${element.FoodName}</h2><p class='text-xs mb-4 line-clamp-4 food-desc'>${element.Desc}</p><footer class="flex justify-end bottom-0"><span class="italic">- ${element.user.username}</span></footer></div></article></a></div>`;
 }
 
 export function fillCardContainer() {
@@ -39,6 +39,7 @@ export function fillCardContainer() {
 export async function fillWithData(id) {
   let kaja = await GetSpecPost(id)
   document.getElementById("foodname").innerHTML = kaja.FoodName;
+  if (kaja.Image) document.getElementById("food-photo").src = kaja.Image;
   let rating = kaja.rating;
   setProgress(rating.taste, 1);
   setProgress(rating.simplicity, 2);
@@ -47,8 +48,8 @@ export async function fillWithData(id) {
   let össz = rating.taste + rating.simplicity + rating.nutrition + rating.price;
   setProgress(össz, 5);
   document.getElementById("desc").innerHTML = kaja.Desc
-  if (kaja.Ingredients != null){
-    document.getElementById("ingredients").innerHTML = "Hozzávalók: " + kaja.Ingredients; 
+  if (kaja.Ingredients != null) {
+    document.getElementById("ingredients").innerHTML = kaja.Ingredients;
   }
 }
 
@@ -61,6 +62,48 @@ function isNoShowPost(post) {
   return post.Desc == "--noshow";
 }
 
+export async function createPost() {
+  const userID = localStorage.getItem("userID")
+
+  if (!userID) return "Please log in";
+  if (!document.getElementById("foodname-input").validity.valid) return "Please enter a name";
+  if (!(document.getElementById("taste-rating").validity.valid && document.getElementById("simplicity-rating").validity.valid && document.getElementById("nurition-rating").validity.valid && document.getElementById("price-rating").validity.valid)) return "Please enter valid ratings (1-10) for all categories";
+
+
+  const post = {
+    foodname: document.getElementById("foodname-input").value,
+    description: document.getElementById("desc-input").value,
+    ingredients: document.getElementById("ingredients-input").value,
+    calories: parseInt(document.getElementById("nutrition-input").value),
+    imgLink: document.getElementById("link-input").value,
+    user: userID,
+    rating: {
+      taste: parseInt(document.getElementById("taste-rating").value),
+      simplicity: parseInt(document.getElementById("simplicity-rating").value),
+      nutrition: parseInt(document.getElementById("nurition-rating").value),
+      price: parseInt(document.getElementById("price-rating").value)
+    }
+  }
+  try {
+    await fetch("https://munchiesdb.vercel.app/api/posts", {
+      method: "POST",
+      body: JSON.stringify(post)
+    })
+  } catch (error) {
+    console.log(error)
+    return error
+  }
+
+  for (const element of document.querySelectorAll(".postfield-element")) {
+    element.innerHTML = "";
+    element.value = "";
+  }
+
+  newPost()
+  location = window.location.href;
+  return "Post Created"
+}
+
 
 /**
  * 
@@ -70,6 +113,7 @@ function isNoShowPost(post) {
     Desc: string,
     Nutri: int | null,
     Ingredients: string,
+    Image: string,
     rating: {
       taste: int,
       price: int,

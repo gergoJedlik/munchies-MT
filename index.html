@@ -5,32 +5,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🥞</text></svg>" />
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🥞</text></svg>" />
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="./css/output.css">
 
-    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script> -->
-
-    <!-- <script type="module" src="./app.js"></script> -->
     <script type="module" src="./index.js"></script>
 
     <title>Munchies Rater</title>
 </head>
 
 <body>
-    <nav class="nav sizeü shadow-[3px_3px_0px_rgba(11,46,71,1)]">
-        <div class="nav-icon logo"><img class="logo-img" src="resources/munchlogo.png" alt="ICON"></div>
-        <div class="nav-icon profile mr-4 mt-3">
-            <a href="./profile.html">
-                <?xml version="1.0" encoding="UTF-8"?><svg width="50px" height="50px" stroke-width="2" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#000000">
-                    <path d="M12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                    <path d="M4.271 18.3457C4.271 18.3457 6.50002 15.5 12 15.5C17.5 15.5 19.7291 18.3457 19.7291 18.3457" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                    <path d="M12 12C13.6569 12 15 10.6569 15 9C15 7.34315 13.6569 6 12 6C10.3431 6 9 7.34315 9 9C9 10.6569 10.3431 12 12 12Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+    <nav class="nav shadow-[3px_3px_0px_rgba(11,46,71,1)] grid grid-cols-4">
+
+        <div data-name="For spacing"></div>
+        <div class="nav-icon logo col-span-2"><img class="logo-img" src="resources/munchlogo.png" alt="ICON"></div>
+        <div class="nav-icon profile ml-auto mr-4 mt-1">
+            <a href="./profile.html" class="flex flex-col items-center justify-center h-full">
+                <?xml version="1.0" encoding="UTF-8"?><svg width="40px" height="40px" stroke-width="2"
+                    viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#000000">
+                    <path
+                        d="M12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2Z"
+                        stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path
+                        d="M4.271 18.3457C4.271 18.3457 6.50002 15.5 12 15.5C17.5 15.5 19.7291 18.3457 19.7291 18.3457"
+                        stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path
+                        d="M12 12C13.6569 12 15 10.6569 15 9C15 7.34315 13.6569 6 12 6C10.3431 6 9 7.34315 9 9C9 10.6569 10.3431 12 12 12Z"
+                        stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
                 </svg>
+                <span class="text-[0.9rem] text-center" id="username-display">Login</span>
             </a>
         </div>
     </nav>
@@ -43,7 +48,7 @@
                 that<br>fits your needs the best!</p>
         </div>
         <div class="w-full h-12 flex justify-end items-end">
-            <div class="w-fit h-10 mr-66 bg-gray-200 rounded-md p-2">
+            <div class="w-fit h-10 sm:mr-12 md:mr-66 lg:mr-66 bg-gray-200 rounded-md p-2">
                 <div class="dropdown">
                     <span class="pr-2">Sort:</span>
                     <label for="dropbtn" id="dropbtn">newest</label>
@@ -62,14 +67,17 @@
         <div class="cards mt-2" id="cards">
 
 
-            <div class="w-80 h-full border-black border-2 rounded-md shadow-[5px_5px_0px_rgba(11,46,71,1)] food-card">
-                <a href="postui.html?postindex=0" class="block cursor-pointer">
+            <div class="w-80 h-120 border-black border-2 rounded-md shadow-[5px_5px_0px_rgba(11,46,71,1)] food-card">
+                <a href="postui.html?postindex=0" class="block cursor-pointer h-full">
                     <article class="w-full h-full">
-                        <figure class="w-full h-1/2 border-black border-b-2">
-                            <img src="resources/first.jpg" alt="Food pic" class="w-full h-60 object-cover" />
+                        <figure class="w-full h-[45%] border-black border-b-2">
+                            <img src="resources/default.jpg" alt="Food pic" class="w-full h-full object-cover" />
                         </figure>
                         <div class="px-6 py-5 text-left h-full">
-                            <h2 class="text-[32px] mb-4 food-name">Food Name</h1>
+                            <h2 class="text-[32px] mb-4 food-name break-words leading-none line-clamp-3">Lorem, ipsum
+                                dolor sit amet consectetur adipisicing elit. Fugiat est doloribus expedita quibusdam
+                                repudiandae doloremque vero ut, cumque illo. Amet, vero. Cum dicta, molestiae quos nobis
+                                eum quas ducimus iste!</h1>
                                 <p class="text-xs mb-4 line-clamp-4 food-desc">
                                     Neobrutalism is an aesthetic characterized by high contrast
                                     elements, bright colors, and bold shapes. It is often used to make
@@ -91,17 +99,29 @@
 
         </div>
         <div class="footnote" id="post-window">
-            <button id="add-button" class="border-black border-2 p-2.5 bg-[#A6FAFF] hover:bg-[#79F7FF] shadow-[3px_3px_0px_rgba(0,0,0,1)] hover:shadow-[0px_0px_0px_rgba(0,0,0,1)] active:bg-[#00E1EF] add-button">
-                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLXBsdXMiPjxwYXRoIGQ9Ik01IDEyaDE0Ii8+PHBhdGggZD0iTTEyIDV2MTQiLz48L3N2Zz4=" alt="plus icon">
+            <button id="add-button"
+                class="border-black border-2 p-2.5 bg-[#A6FAFF] hover:bg-[#79F7FF] shadow-[3px_3px_0px_rgba(0,0,0,1)] hover:shadow-[0px_0px_0px_rgba(0,0,0,1)] active:bg-[#00E1EF] add-button">
+                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLXBsdXMiPjxwYXRoIGQ9Ik01IDEyaDE0Ii8+PHBhdGggZD0iTTEyIDV2MTQiLz48L3N2Zz4="
+                    alt="plus icon">
             </button>
 
             <div class="postmenu flex align-center flex-col" id="postmenu">
-                <h2 class="postmenu-title">Post a new Munch:</h2>
+                <div class="flex flex-row flex-wrap items-end">
+                    <h2 class="postmenu-title">Post a new Munch:</h2> <button type="submit" id="createPost"
+                        class="border-black mb-2 ml-10 border-2 w-30 h-12 rounded-full p-2.5 bg-[#A6FAFF] hover:bg-[#79F7FF] shadow-[3px_3px_0px_rgba(0,0,0,1)] hover:shadow-[0px_0px_0px_rgba(0,0,0,1)] active:bg-[#00E1EF]">Create
+                        Post</button>
+                </div>
                 <hr>
+                <div id="error-field"
+                    class="hidden error w-8/10 mt-10 ml-12 rounded-xl border-3 border-gray-300 bg-gray-400">
+                    <p class="text-center"><span id="error-msg"></span></p>
+                </div>
                 <div class="m-10 cont-row flex align-center justify-center flex-col flex-nowrap">
                     <div class="mt-4 mb-4">
                         <h3 class="text-white">Name:</h3>
-                        <input type="text" placeholder="Name your Munch" class="foodname-input text-white font-medium" name="foodname" id="foodname-input">
+                        <input required type="text" placeholder="Name your Munch"
+                            class="foodname-input text-white font-medium postfield-element" name="foodname"
+                            id="foodname-input">
                     </div>
                 </div>
 
@@ -109,14 +129,15 @@
                     <h3 class="text-white mt-4">
                         Recepie:
                     </h3>
-                    <textarea class="text-white mb-5" rows="30" name="desc" id="desc-input" placeholder="Describe how you made your Munch"></textarea>
+                    <textarea class="text-white mb-5 postfield-element" rows="30" name="desc" id="desc-input"
+                        placeholder="Describe how you made your Munch"></textarea>
                 </div>
 
                 <div class="m-10 cont-row flex align-start justify-start flex-col flex-nowrap">
                     <h3 class="text-white mt-4">
                         Ingredients:
                     </h3>
-                    <textarea rows="16" class="text-white text-medium mb-4" placeholder="List the ingredients eg. 
+                    <textarea rows="16" class="text-white text-medium mb-4 postfield-element" placeholder="List the ingredients eg. 
 egg - 2
 salt - 1ts" name="ingre" id="ingredients-input"></textarea>
                 </div>
@@ -126,19 +147,49 @@ salt - 1ts" name="ingre" id="ingredients-input"></textarea>
                         <h3 class="text-white mt-4">
                             Calories:
                         </h3>
-                        <input placeholder="0" class="text-white font-large h-14 w-26" type="number" name="kcal" id="nutrition-input">
+                        <input placeholder="0" class="text-white font-large h-14 w-26 postfield-element" type="number"
+                            name="kcal" id="nutrition-input">
                     </div>
 
                     <div class="m-10 cont-block flex align-center justify-center flex-col flex-wrap h-40">
-                        <input type="file" id="file" style="visibility:hidden">
-                        <label for="file" class="border-black border-2 mb-3 md:p-2.5 bg-[#A6FAFF] hover:bg-[#79F7FF] shadow-[3px_3px_0px_rgba(0,0,0,1)] hover:shadow-[0px_0px_0px_rgba(0,0,0,1)] active:bg-[#00E1EF] w-48" style="
-                                                            color: black;
-                                                            line-height: 1.2;
-                                                            padding: 15px;
-                                                            border-radius: 4em;
-                                                            cursor: pointer;">
-                            <span>Upload Picture</span>
-                        </label>
+                        <h3 class="text-white mt-4">Image URL:</h3>
+                        <input type="url" id="link-input"
+                            class="foodname-input text-white font-medium  postfield-element">
+                    </div>
+                </div>
+                <h3 class="text-white ml-24 mt-6 text-xl" id="ratings">Ratings:</h3>
+                <div class="flex sm:flex-col md:flex-row flex-wrap pl-16">
+                    <div class="m-2 cont-block flex align-start justify-start flex-col flex-wrap h-40">
+                        <h4 class="text-white mt-4">
+                            Taste:
+                        </h4>
+                        <input required placeholder="0" max="10" min="1"
+                            class="text-white font-large h-14 w-26 postfield-element" type="number" name="kcal"
+                            id="taste-rating">
+                    </div>
+                    <div class="m-2 cont-block flex align-start justify-start flex-col flex-wrap h-40">
+                        <h4 class="text-white mt-4">
+                            Simplicity:
+                        </h4>
+                        <input required placeholder="0" max="10" min="1"
+                            class="text-white font-large h-14 w-26 postfield-element" type="number" name="kcal"
+                            id="simplicity-rating">
+                    </div>
+                    <div class="m-2 cont-block flex align-start justify-start flex-col flex-wrap h-40">
+                        <h4 class="text-white mt-4">
+                            Nutrition:
+                        </h4>
+                        <input required placeholder="0" max="10" min="1"
+                            class="text-white font-large h-14 w-26 postfield-element" type="number" name="kcal"
+                            id="nurition-rating">
+                    </div>
+                    <div class="m-2 cont-block flex align-start justify-start flex-col flex-wrap h-40">
+                        <h4 class="text-white mt-4">
+                            Price:
+                        </h4>
+                        <input required placeholder="0" max="10" min="1"
+                            class="text-white font-large h-14 w-26 postfield-element" type="number" name="kcal"
+                            id="price-rating">
                     </div>
                 </div>
 
