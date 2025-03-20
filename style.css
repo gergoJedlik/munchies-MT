@@ -309,13 +309,13 @@ textarea {
 .progress-container {
     display: flex;
     align-items: center;
-    width: 30%;
+    width: 100%;
     height: 2.5rem;
-    border: 4px solid black;
+    border: 3px solid black;
     background: white;
     position: relative;
     padding: 6px;
-    box-shadow: 6px 6px 0px black;
+    /* box-shadow: 6px 6px 0px black; */
     border-radius: 12px;
 }
 
