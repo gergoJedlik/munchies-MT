@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
 @theme {
-    --color-paper: #FFFFFB;
+    --color-paper: #edffff;
     --color-white-blur: rgba(255, 255, 255, 0.7);
 }

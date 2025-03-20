@@ -12,8 +12,8 @@
     }
 
     to {
-        background-position-x: 100%;
-        background-position-y: -100%;
+        background-position-x: 1000px;
+        background-position-y: -1000px;
     }
 }
 
