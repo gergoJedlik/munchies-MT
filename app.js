@@ -38,6 +38,7 @@ export function fillCardContainer() {
 
 export async function fillWithData(id) {
   let kaja = await GetSpecPost(id);
+  console.log(kaja)
   document.getElementById("foodname").innerHTML = kaja.FoodName;
   document.getElementById("author").innerText = kaja.User.name;
   let time = kaja.createdAt.split("T")
@@ -62,7 +63,7 @@ export function getDataFromURL(url) {
 }
 
 function isNoShowPost(post) {
-  return post.Desc == "--noshow";
+  return post.Desc.includes("--noshow");
 }
 
 export async function createPost() {
