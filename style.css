@@ -291,6 +291,7 @@ textarea {
 .progress-container {
     display: flex;
     align-items: center;
+    margin-top: 1.3rem;
     width: 100%;
     height: 2.5rem;
     border: 3px solid black;
