@@ -50,14 +50,19 @@
 
     <div class="flex flex-col md:flex-row">
         <img id="food-photo" src="/resources/default.jpg" alt=""
-            class="w-[90%] md:w-[45%] lg:w-[30%] ml-[5%] mt-[3%] rounded-[25px] object-cover aspect-square shadow-[10px_10px_0px_rgba(0,0,0,1)]">
+            class="aspect-square h-auto w-[90%] md:w-[40%] lg:w-[35%] ml-[5%] mt-[3%] rounded-[25px] object-cover shadow-[10px_10px_0px_rgba(0,0,0,1)]">
         <div class="mt-[6%] ml-[4%] md:w-full food-name">
 
             <div
                 class="flex text-[80px] justify-self-center flex-col border-4 rounded-4xl p-6 w-[90%] lg:w-[70%] gap-6 bg-white-blur shadow-[4px_4px_0px_rgba(0,0,0,1)]">
-                <h1 class="mt-[2.5rem] mb-5 text-5xl md:text-5xl lg:text-8xl text-center leading-none" id="foodname">
+                <h1 class="mt-[2.5rem] mb-0 text-5xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl text-center leading-none"
+                    id="foodname">
                     Food
                     Name</h1>
+                <div class="flex flex-col self-end mb-5 text-right">
+                    <span class="font-sans italic text-xl md:text-xl lg:text-2xl">by <span id="author"></span></span>
+                    <span id="time" class="font-sans text-sm lg:text-md"></span>
+                </div>
                 <div class="progress-container" style="margin-top:-1%;">
                     <div class="progress-label spacemono">Taste</div>
                     <div class="progress-wrapper">

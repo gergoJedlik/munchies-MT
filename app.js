@@ -21,7 +21,7 @@ export function setProgress(score, index) {
 // setProgressall(10);
 
 function cardGen(element) {
-  return `<div class='w-80 h-130 border-black border-2 rounded-md shadow-[5px_5px_0px_rgba(11,46,71,1)] food-card'><a href='postui.html?postid=${element.postID}' class='block cursor-pointer h-full' ><article class='w-full h-full'><figure class='w-full h-[45%] border-black border-b-2'><img src=${element.Image ? element.Image : './resources/default.jpg'} alt='Food pic' class='w-full h-full object-cover'/></figure><div class='px-6 py-5 text-left h-full'><h2 class='text-[32px] mb-4 food-name break-words leading-none line-clamp-3'>${element.FoodName}</h2><p class='text-xs mb-4 line-clamp-4 food-desc'>${element.Desc}</p><footer class="flex justify-end bottom-0"><span class="italic">- ${element.user.username}</span></footer></div></article></a></div>`;
+  return `<div class='w-80 h-130 border-black border-2 rounded-md shadow-[5px_5px_0px_rgba(11,46,71,1)] food-card'><a href='postui.html?postid=${element.postID}' class='block cursor-pointer h-full' ><article class='w-full h-full'><figure class='w-full h-[45%] border-black border-b-2'><img src=${element.Image ? element.Image : './resources/default.jpg'} alt='Food pic' class='w-full h-full object-cover'/></figure><div class='px-6 py-5 text-left h-[55%]'><h2 class='text-[32px] mb-4 food-name break-words leading-none line-clamp-3'>${element.FoodName}</h2><p>rated: ${element.rating.overall} out of 40</p><p class='text-xs mb-4 line-clamp-4 food-desc'>${element.Desc}</p><footer class="flex justify-end bottom-0"><span class="italic">- ${element.user.username}</span></footer></div></article></a></div>`;
 }
 
 export function fillCardContainer() {
@@ -37,8 +37,11 @@ export function fillCardContainer() {
 }
 
 export async function fillWithData(id) {
-  let kaja = await GetSpecPost(id)
+  let kaja = await GetSpecPost(id);
   document.getElementById("foodname").innerHTML = kaja.FoodName;
+  document.getElementById("author").innerText = kaja.User.name;
+  let time = kaja.createdAt.split("T")
+  document.getElementById("time").innerText = `${time[0]} ${time[1].split(".")[0]}`;
   if (kaja.Image) document.getElementById("food-photo").src = kaja.Image;
   let rating = kaja.rating;
   setProgress(rating.taste, 1);
@@ -133,7 +136,7 @@ async function GetAllPosts(sortMode) {
   const res = await fetch(`https://munchiesdb.vercel.app/api/posts?sort=${sortMode}`);
   const { data } = await res.json();
   const foods = data.map((post) => {
-    let [taste, price, texture, simplicity, nutrition, abundancy, overall] = [
+    let [taste, price, texture, simplicity, nutrition, abundancy] = [
       0, 0, 0, 0, 0, 0, 0
     ];
     for (const rating of post.Ratings) {
@@ -145,13 +148,13 @@ async function GetAllPosts(sortMode) {
       abundancy += rating.abundancy;
     }
     const len = post.Ratings.length;
-    overall = taste + abundancy + simplicity + nutrition;
     taste = taste / len;
     price = price / len;
     texture = texture / len;
     abundancy = abundancy / len;
     simplicity = simplicity / len;
     nutrition = nutrition / len;
+    let overall = taste + price + simplicity + nutrition;
 
     const username = post.User.name
     const userID = post.userID;
@@ -199,6 +202,9 @@ export async function setSort(value) {
   console.log(`Sort : ${value}`)
   sortMode = value;
   kaják = await GetAllPosts(sortMode);
+  if (sortMode == "rating") {
+    kaják = kaják.sort((a, b) => b.rating.overall - a.rating.overall);
+  }
   fillCardContainer();
 }
 

@@ -1,6 +1,5 @@
 import { newPost, fillCardContainer, setSort, createPost, kaják } from "./app.js";
 
-console.log(kaják)
 fillCardContainer();
 document.getElementById("add-button").addEventListener("click", newPost);
 
