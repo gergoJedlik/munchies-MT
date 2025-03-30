@@ -198,6 +198,9 @@
   }
 }
 @layer utilities {
+  .fixed {
+    position: fixed;
+  }
   .bottom-0 {
     bottom: calc(var(--spacing) * 0);
   }

@@ -38,9 +38,10 @@ export function fillCardContainer() {
 
 export async function fillWithData(id) {
   let kaja = await GetSpecPost(id);
-  console.log(kaja)
+
   document.getElementById("foodname").innerHTML = kaja.FoodName;
   document.getElementById("author").innerText = kaja.User.name;
+  document.getElementById("userlink").href = `./user.html?userID=${kaja.User.id}`
   let time = kaja.createdAt.split("T")
   document.getElementById("time").innerText = `${time[0]} ${time[1].split(".")[0]}`;
   if (kaja.Image) document.getElementById("food-photo").src = kaja.Image;
