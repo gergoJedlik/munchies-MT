@@ -20,8 +20,8 @@ export function setProgress(score, index) {
 
 // setProgressall(10);
 
-function cardGen(element) {
-  return `<div class='w-80 h-130 border-black border-2 rounded-md shadow-[5px_5px_0px_rgba(11,46,71,1)] food-card'><a href='postui.html?postid=${element.postID}' class='block cursor-pointer h-full' ><article class='w-full h-full'><figure class='w-full h-[45%] border-black border-b-2'><img src=${element.Image ? element.Image : './resources/default.jpg'} alt='Food pic' class='w-full h-full object-cover'/></figure><div class='px-6 py-5 text-left h-[55%]'><h2 class='text-[32px] mb-4 food-name break-words leading-none line-clamp-3'>${element.FoodName}</h2><p>rated: ${element.rating.overall} out of 40</p><p class='text-xs mb-4 line-clamp-4 food-desc'>${element.Desc}</p><footer class="flex justify-end bottom-0"><span class="italic">- ${element.user.username}</span></footer></div></article></a></div>`;
+export function cardGen(element) {
+  return `<div class='w-80 h-130 border-black border-2 rounded-lg shadow-[5px_5px_0px_rgba(11,46,71,1)] food-card'><a href='postui.html?postid=${element.postID}' class='block cursor-pointer h-full' ><article class='w-full h-full'><figure class='w-full h-[45%] border-black border-b-2'><img src=${element.Image ? element.Image : './resources/default.jpg'} alt='Food pic' class='w-full h-full object-cover rounded-t-lg'/></figure><div class='px-6 py-5 text-left h-[55%]'><h2 class='text-[32px] mb-4 food-name break-words leading-none line-clamp-3'>${element.FoodName}</h2><p>rated: ${element.rating.overall} out of 40</p><p class='text-xs mb-4 line-clamp-4 food-desc'>${element.Desc}</p><footer class="flex justify-end bottom-0"><span class="italic">- ${element.user.username}</span></footer></div></article></a></div>`;
 }
 
 export function fillCardContainer() {
@@ -38,9 +38,10 @@ export function fillCardContainer() {
 
 export async function fillWithData(id) {
   let kaja = await GetSpecPost(id);
-  console.log(kaja)
+
   document.getElementById("foodname").innerHTML = kaja.FoodName;
   document.getElementById("author").innerText = kaja.User.name;
+  document.getElementById("userlink").href = `./user.html?userID=${kaja.User.id}`
   let time = kaja.createdAt.split("T")
   document.getElementById("time").innerText = `${time[0]} ${time[1].split(".")[0]}`;
   if (kaja.Image) document.getElementById("food-photo").src = kaja.Image;
@@ -62,7 +63,7 @@ export function getDataFromURL(url) {
   return splitted[1];
 }
 
-function isNoShowPost(post) {
+export function isNoShowPost(post) {
   return post.Desc.includes("--noshow");
 }
 
