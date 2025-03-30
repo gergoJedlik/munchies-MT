@@ -1,9 +1,9 @@
-import { getDataFromURL, isNoShowPost, cardGen } from "./app"
+import { getDataFromURL, isNoShowPost, cardGen } from "./app.js"
 
 let user = await fetch(`https://munchiesdb.vercel.app/api/users?userID=${getDataFromURL(window.location.href)}`);
 let postdata = await fetch(`https://munchiesdb.vercel.app/api/posts?userID=${getDataFromURL(window.location.href)}`);
 user = await user.json()
-postdata = await posts.json()
+postdata = await postdata.json()
 const posts = getPosts()
 
 fillWithData()
@@ -18,6 +18,7 @@ function fillWithData() {
         const card = cardGen(element);
         container.innerHTML += card;
     }
+    if (!container.innerHTML) container.innerHTML = "<h4>USER HAS NO POSTS</h4>"
 }
 
 

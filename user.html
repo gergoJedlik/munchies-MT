@@ -49,78 +49,16 @@
     </nav>
 
     <div class="content flex flex-col gap-6">
-        <div class="food-name mt-6 w-[98%] bg-paper p-2 border-3 rounded-3xl">
+        <div
+            class="food-name flex flex-col lg:w-[10em] min-w-fit items-center justify-end mt-6 w-[98%] bg-paper py-3 px-5 border-3 rounded-3xl">
             <h1 id="name" class="text-5xl break-words text-center">username</h1>
         </div>
-        <section class="flex flex-col w-[98%] bg-white-blur mt-5 px-2 py-4 border-3 rounded-3xl">
-            <header>
-                <h2 class="text-2xl font-sans text-center">Posts (<span id="postnum">num</span>)</h2>
+        <section class="flex flex-col w-[98%] lg:w-[85%] bg-white-blur mt-5 px-2 py-4 border-3 rounded-3xl mb-6">
+            <header class="">
+                <h2 class="text-2xl font-sans text-center">Posts</h2>
             </header>
-            <div id="posts" class="flex flex-col mt-4 gap-6 p-2">
-
-                <div
-                    class="w-full h-120 border-black border-2 rounded-md shadow-[5px_5px_0px_rgba(11,46,71,1)] food-card">
-                    <a href="postui.html?postindex=0" class="block cursor-pointer h-full">
-                        <article class="w-full h-full">
-                            <figure class="w-full h-[45%] border-black border-b-2">
-                                <img src="resources/default.jpg" alt="Food pic" class="w-full h-full object-cover" />
-                            </figure>
-                            <div class="px-6 py-5 text-left h-[55%]">
-                                <h2 class="text-[32px] mb-4 food-name break-words leading-none line-clamp-3">Lorem,
-                                    ipsum
-                                    dolor sit amet consectetur adipisicing elit. Fugiat est doloribus expedita quibusdam
-                                    repudiandae doloremque vero ut, cumque illo. Amet, vero. Cum dicta, molestiae quos
-                                    nobis
-                                    eum quas ducimus iste!</h2>
-                                <p class="text-xs mb-4 line-clamp-4 food-desc">
-                                    Neobrutalism is an aesthetic characterized by high contrast
-                                    elements, bright colors, and bold shapes. It is often used to make
-                                    a statement, as it is meant to be eye-catching and stand out to
-                                    the viewer. It is also used in user interface and web design, with
-                                    features such as vibrant colors and bold shapes. Neobrutalism can
-                                    also be used in print design, with an example being a bold shape
-                                    with a vibrant color fill applied to it.
-                                </p>
-                                <footer class="flex justify-end">
-                                    <span class="italic">- username</span>
-                                </footer>
-                            </div>
-                        </article>
-                    </a>
-                </div>
-
-                <div
-                    class="w-full h-120 border-black border-2 rounded-md shadow-[5px_5px_0px_rgba(11,46,71,1)] food-card">
-                    <a href="postui.html?postindex=0" class="block cursor-pointer h-full">
-                        <article class="w-full h-full">
-                            <figure class="w-full h-[45%] border-black border-b-2">
-                                <img src="resources/default.jpg" alt="Food pic" class="w-full h-full object-cover" />
-                            </figure>
-                            <div class="px-6 py-5 text-left h-[55%]">
-                                <h2 class="text-[32px] mb-4 food-name break-words leading-none line-clamp-3">Lorem,
-                                    ipsum
-                                    dolor sit amet consectetur adipisicing elit. Fugiat est doloribus expedita quibusdam
-                                    repudiandae doloremque vero ut, cumque illo. Amet, vero. Cum dicta, molestiae quos
-                                    nobis
-                                    eum quas ducimus iste!</h2>
-                                <p class="text-xs mb-4 line-clamp-4 food-desc">
-                                    Neobrutalism is an aesthetic characterized by high contrast
-                                    elements, bright colors, and bold shapes. It is often used to make
-                                    a statement, as it is meant to be eye-catching and stand out to
-                                    the viewer. It is also used in user interface and web design, with
-                                    features such as vibrant colors and bold shapes. Neobrutalism can
-                                    also be used in print design, with an example being a bold shape
-                                    with a vibrant color fill applied to it.
-                                </p>
-                                <footer class="flex justify-end">
-                                    <span class="italic">- username</span>
-                                </footer>
-                            </div>
-                        </article>
-                    </a>
-                </div>
-
-
+            <div id="posts" class="flex flex-col md:flex-row flex-wrap items-center justify-center mt-4 gap-6 p-2">
+                <h4>LOADING POSTS OF USER...</h4>
             </div>
         </section>
     </div>
