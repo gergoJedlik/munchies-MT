@@ -401,3 +401,7 @@ textarea {
 #ingredients {
     padding-top: 5%;
 }
+
+/* .fade-to-right {
+    mask-image: linear-gradient(black calc(100% - 48px), );
+} */
