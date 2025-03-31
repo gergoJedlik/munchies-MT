@@ -402,6 +402,14 @@ textarea {
     padding-top: 5%;
 }
 
-/* .fade-to-right {
-    mask-image: linear-gradient(black calc(100% - 48px), );
-} */
+.fade-right {
+    width: 100%;
+    height: 100%;
+    mask-image: linear-gradient(to right, black calc(98%), transparent);
+}
+
+.fade-left {
+    width: 100%;
+    height: 100%;
+    mask-image: linear-gradient(to left, black calc(98%), transparent);
+}
